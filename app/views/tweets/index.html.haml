@@ -1,7 +1,8 @@
 
 .page-header
   %h1 Listing Tweets
-
+.btn.btn-primary.toggle-icons
+  Toggle Icons
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
 
@@ -13,7 +14,7 @@
             %p
               = tweet.hearts.count
               = link_to like_tweet_path(tweet) do
-                %i.fa.fa-heart{"aria-hidden" => "true"}
+                %i.fa.fa-heart.love-tweet{"aria-hidden" => "true"}
               = tweet.username
               = distance_of_time_in_words_to_now(tweet.created_at)
               ago
